@@ -5,8 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NotificationPendingComponent } from './notification-pending/notification-pending.component';
-import { NotificationAcceptedComponent } from './notification-accepted/notification-accepted.component';
-import { NotificationDeniedComponent } from './notification-denied/notification-denied.component';
+
 import { NotificationFormComponent } from './notification-form/notification-form.component';
 
 @NgModule({
@@ -14,8 +13,7 @@ import { NotificationFormComponent } from './notification-form/notification-form
     AppComponent,
     NavbarComponent,
     NotificationPendingComponent,
-    NotificationAcceptedComponent,
-    NotificationDeniedComponent,
+
     NotificationFormComponent
   ],
   imports: [

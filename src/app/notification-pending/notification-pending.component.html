@@ -1,23 +1,28 @@
-<div class="card1">
-    <div class="notification">
+<div [ngClass]="{'bg-pending': show == 'pending',
+'bg-denied': show == 'denied',
+'bg-accepted': show == 'accepted',
+}" class="card1">
+    <div *ngFor="let n of notifications">
+        <div *ngIf="n.status == show" class="notification">
         <div class="status-dot"></div>
         <div class="content">
             <div class="circle">
                 <img src="https://e7.pngegg.com/pngimages/56/219/png-clipart-guy-fawkes-mask-illustration-guy-fawkes-mask-anonymous-anonymous-mask-face-people.png" alt="Immagine persona">
             </div>
             <div class="message-container">
-                <p class="sender">Mittente</p>
-                <p class="recipient">Destinatario</p>
-                <p class="date">Data di creazione</p>
-                <p class="message">Testo del messaggio</p>
+                <p class="sender">Mittente id :{{n.mittente}}</p>
+                <p class="recipient">Destinatario id:{{n.destinatario}}</p>
+                <p class="message">Messaggio: {{n.text}}</p>
+                <p class="date">Data: {{n.created_date}}</p>
+                <ng-template #status>{{n.status}}</ng-template>
             </div>
            
         </div>
-        <div class="buttonCard d-flex">
-            <button class="btn btnaccepted btn-success">V</button>
-            <button class="btn btn-danger">X</button>
+        <div *ngIf="show =='pending'" class="buttonCard d-flex">
+            <button class="btn btnaccepted btn-success" (click)="changeStatus(n.id, 'accepted')">V</button>
+            <button class="btn btn-danger" (click)="changeStatus(n.id, 'denied')">X</button>
         </div>
+    </div>
       </div>
-      
       
 </div>

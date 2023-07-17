@@ -4,4 +4,5 @@ export interface Notification {
 	status:string,
     mittente:number,
     destinatario:number 
+    created_date:Date
 }

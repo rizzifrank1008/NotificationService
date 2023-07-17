@@ -1,11 +1,12 @@
+<app-notification-form  class="formStyle" *ngIf="visible"></app-notification-form>
 <div class="container">
   
-  <app-navbar (visibilityEmitter)="receiveVisibility($event)"></app-navbar>
-  <app-notification-form  class="formStyle"    *ngIf="visible"></app-notification-form>
-    <div class="flex-wrap d-flex justify-content-between">
-      <app-notification-pending></app-notification-pending>
-      <app-notification-accepted></app-notification-accepted>
-      <app-notification-denied></app-notification-denied>
+  <app-navbar (idEmitter)="receiveId($event)" (visibilityEmitter)="receiveVisibility($event)"></app-navbar>
+  <div class="flex-wrap d-flex justify-content-between">
+      <app-notification-pending [idDestinatario]="idDestinatario" [show]="'pending'"></app-notification-pending>
+      <app-notification-pending [idDestinatario]="idDestinatario" [show]="'accepted'"></app-notification-pending>
+      <app-notification-pending [idDestinatario]="idDestinatario" [show]="'denied'"></app-notification-pending>
+     
     </div>
   
 </div>

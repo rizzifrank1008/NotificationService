@@ -3,6 +3,6 @@
        <button (click)="changeVisibility()"><i class="fa-solid fa-plus"></i></button>
     </div>
     <div>
-        <input type="number">
+        <input type="number" (change)="emitId()" #idDestinatario>
     </div>
 </div>

@@ -1,8 +1,23 @@
 .card1{
     height: 70vh;
-    background-color: rgb(182, 255, 234);
+   
     border-radius: 25px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 8px;
     
+}
+.bg-pending{
+  background-color: rgb(182, 255, 234);
+}
+.bg-accepted{
+  background-color: rgba(6, 255, 127, 0.483);
+}
+.bg-denied{
+  background-color: rgba(251, 61, 61, 0.368);
+}
+.notification:hover{
+  transform: scale(1.03);
 }
 .notification {
     display: flex;

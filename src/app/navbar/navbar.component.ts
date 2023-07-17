@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +7,15 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class NavbarComponent {
   visible:boolean=false
+  @ViewChild('idDestinatario') idDestinatario!:ElementRef;
+  @Output() idEmitter = new EventEmitter<number>
   @Output() visibilityEmitter=new EventEmitter<boolean>()
   changeVisibility(){
     this.visible=!this.visible
     this.visibilityEmitter.emit(this.visible)
+  }
+  emitId(){
+    this.idEmitter.emit(this.idDestinatario.nativeElement.value)
   }
 }
 
