@@ -1,0 +1,44 @@
+.input-form {
+   margin-top: 10%;
+   width: 100%;
+    display: flex !important;
+    justify-content: center ;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: 400px !important;
+   
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+   
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="number"],
+  textarea {
+    width: 20vw;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+ 

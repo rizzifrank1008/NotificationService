@@ -1,8 +1,8 @@
 <div class="container">
   
-  <app-navbar></app-navbar>
-  <app-notification-form></app-notification-form>
-    <div class="d-flex justify-content-between">
+  <app-navbar (visibilityEmitter)="receiveVisibility($event)"></app-navbar>
+  <app-notification-form  class="formStyle"    *ngIf="visible"></app-notification-form>
+    <div class="flex-wrap d-flex justify-content-between">
       <app-notification-pending></app-notification-pending>
       <app-notification-accepted></app-notification-accepted>
       <app-notification-denied></app-notification-denied>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'notificationProgectAngular';
+  visible:boolean=false;
+  receiveVisibility(visibility:boolean){
+   this.visible=visibility
+  }
 }
